@@ -1,15 +1,15 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-import Slider from '@/components/slider'
-import FoodList from '@/components/FoodList'
+import axios from "axios";
+import Head from 'next/head';
+import { Inter } from 'next/font/google';
+import styles from '@/styles/Home.module.css';
+import Slider from '@/components/slider';
+import FoodList from '@/components/FoodList';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({foodList}) {
   return (
-    <>
+    <div className={styles.container} >
       <Head>
         <title>Fifi Cuisine Bristol</title>
         <meta name="description" content="Best Food Vendor In Town" />
@@ -18,10 +18,19 @@ export default function Home() {
       </Head>
      
       <main className={`${styles.main} ${inter.className}`}>
-      <Slider/>
-      <FoodList />
+      <Slider />
+      <FoodList foodList={foodList}/>
       
       </main>
-    </>
-  )
+    </div>
+  );
 }
+
+export const getServerSideProps = async () => {
+  const res = await axios.get("http://localhost:3000/api/products");
+  return {
+    props: {
+      foodList:res.data,
+    },
+  };
+}; 

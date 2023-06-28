@@ -10,18 +10,25 @@
     display: flex;  
     align-items: center;
     justify-content: center;
-    margin-top: -50px;
+    /* margin-top: -50px; */
 }
 
 .right{
     flex: 1;
-    padding: 20px;
+    margin-left: 15%;
+    margin-top: 50px;
 }
 
 .imgContainer{
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
     position: relative;
+    padding: 10%;
+}
+
+.title {
+  margin-top: -25px;
+  /* margin-bottom: 10px; */
 }
 
 .price{
@@ -29,6 +36,12 @@
     font-size: 24px;
     font-weight: 400;
     border-bottom: 1px solid #d1411e;
+    /* padding-top: 500px; */
+}
+
+.desc {
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .sizes{
@@ -92,23 +105,41 @@
     border: none;
     font-weight: 500;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
     .container {
       height: auto;
       text-align: center;
       flex-direction: column;
-      margin-top: 180px;
+      margin-top: 100px;
+      margin-left: -60px;
+      /* width: 100%; */
     }
   
     .imgContainer {
-      width: 70vw;
-      height: 70vw;
+      width: 50vw;
+      height: 50vw;
+      margin-left: 35px;
     }
   
     .title {
-      margin: 5px;
+      margin-top: 200px;
+      margin-bottom: 5px;
+      /* font-size: 18px;
+      font-weight: bold;
+      color: red;
+      margin-top: 10px; */
+    }
+
+    .desc {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    .price {
+      margin-bottom: 5px;
     }
   
     .sizes {
@@ -134,5 +165,51 @@
     .button {
       height: 50px;
       padding: 10px 20px;
+      /* width: 100px; */
     }
   }
+
+  /* .container{
+    width: 22%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    cursor: pointer;
+}
+
+.title{
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    margin-top: 10px;
+}
+
+.price{
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+}
+
+.desc{
+    text-align: center;
+    color: #777;
+    margin-top: 10px;
+}
+  
+  @media screen and (max-width: 480px) {
+    .container {
+      width: 100%;
+    }
+  
+    .title {
+      font-size: 30px;
+    }
+  
+    .price,
+    .desc {
+      font-size: 24px;
+    }
+  } */
