@@ -60,6 +60,9 @@
 .listItem{
     margin: 20px;
     font-weight: 500;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .cart{
