@@ -4,7 +4,7 @@ import { useState } from "react";
 import styles from "../../styles/Admin.module.css";
 
 const Index = ({ orders, products }) => {
-  const [pizzaList, setPizzaList] = useState(products);
+  const [foodList, setfoodList] = useState(products);
   const [orderList, setOrderList] = useState(orders);
   const status = ["preparing", "on the way", "delivered"];
 
@@ -14,7 +14,7 @@ const Index = ({ orders, products }) => {
       const res = await axios.delete(
         "http://localhost:3000/api/products/" + id
       );
-      setPizzaList(pizzaList.filter((pizza) => pizza._id !== id));
+      setfoodList(foodList.filter((food) => food._id !== id));
     } catch (err) {
       console.log(err);
     }
@@ -51,7 +51,7 @@ const Index = ({ orders, products }) => {
               <th>Action</th>
             </tr>
           </tbody>
-          {pizzaList.map((product) => (
+          {foodList.map((product) => (
             <tbody key={product._id}>
               <tr className={styles.trTitle}>
                 <td>
@@ -141,3 +141,6 @@ export const getServerSideProps = async (ctx) => {
 };
 
 export default Index;
+
+
+// rcfe

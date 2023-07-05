@@ -106,3 +106,5 @@ export const getServerSideProps = async ({params}) => {
   };
 
 export default Product 
+
+// fificuisine.netlify.app
