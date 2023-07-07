@@ -42,7 +42,7 @@ export const getServerSideProps = async (ctx) => {
     admin = true;
   }
 
-  const res = await axios.get("https://fificuisine.netlify.app//api/products");
+  const res = await axios.get("https://fificuisine.netlify.app/api/products");
   return {
     props: {
       foodList:res.data,
