@@ -10,7 +10,7 @@ const FoodCard = ({food}) => {
           </Link>
           
           <h1 className={styles.title}>{food.title}</h1>
-          <span className={styles.price}>{food.prices[0]}</span>
+          <span className={styles.price}>#{food.prices[0]}</span>
           <p className={styles.desc}>
             {food.desc}
           </p>

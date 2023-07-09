@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className={styles.container}>
             <div className={styles.item}>
-                <Image src="/img/temp-slider.jpg" layout='fill'/>
+                <Image src="/img/temp-slider.jpg" layout='fill' />
             </div>
             <div className={styles.item}>
                 {/* <div className={styles.card}>
@@ -16,7 +16,7 @@ const Footer = () => {
                 </div> */}
                 <div className={styles.card}>
                     <h1 className={styles.title}>FIND OUR RESTAURANT</h1>
-                    <p  className={styles.text}>
+                    <p className={styles.text}>
                         Yafrato Complex, Opposite Jaiz Bank,
                         <br /> Alagbaka, Akure.
                         <br /> 07062319778, 07053764997
@@ -32,11 +32,12 @@ const Footer = () => {
                 <div className={styles.card}>
                     <h1 className={styles.title}>SOCIAL MEDIA</h1>
                     <div className={styles.text}>
-                    <SocialIcon url="https://instagram.com/fifis_cuisinebistro" network="instagram" style={{ height: 50, width: 50 }} bgColor="red" />
+                        <SocialIcon url="https://instagram.com/fifis_cuisinebistro" network="instagram" style={{ height: 50, width: 50 }} bgColor="red" />
                     </div>
                 </div>
             </div>
         </div>
+
     )
 }
 
